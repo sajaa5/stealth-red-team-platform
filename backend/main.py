@@ -1,6 +1,12 @@
 from fastapi import FastAPI
+
 from backend.api.routes.health import router as health_router
 from backend.core.config import settings
+from backend.core.database import Base, engine
+from backend.models.target import Target
+
+
+Base.metadata.create_all(bind=engine)
 
 
 app = FastAPI(
