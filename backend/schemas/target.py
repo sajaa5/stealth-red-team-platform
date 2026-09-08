@@ -1,5 +1,8 @@
 from pydantic import BaseModel, ConfigDict
 
+from backend.schemas.service import ServiceResponse
+from backend.schemas.assessment import AssessmentResponse
+
 
 class TargetBase(BaseModel):
     name: str
@@ -14,5 +17,7 @@ class TargetCreate(TargetBase):
 
 class TargetResponse(TargetBase):
     id: int
+    services: list[ServiceResponse] = []
+    assessments: list[AssessmentResponse] = []
 
     model_config = ConfigDict(from_attributes=True)

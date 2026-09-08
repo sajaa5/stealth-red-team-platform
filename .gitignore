@@ -1,6 +1,18 @@
+# Virtual environment
 .venv/
+
+# Python cache
 __pycache__/
 *.pyc
-.env
+.pytest_cache/
 
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Database
 *.db
+
+# IDE
+.vscode/

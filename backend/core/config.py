@@ -5,6 +5,7 @@ class Settings(BaseSettings):
     app_name: str = "Stealth Red Team Evaluation Platform"
     app_version: str = "0.1.0"
     debug: bool = True
+    secret_key: str
 
     class Config:
         env_file = ".env"

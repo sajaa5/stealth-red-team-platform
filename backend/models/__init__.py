@@ -1,3 +1,5 @@
 from backend.models.target import Target
+from backend.models.service import Service
+from backend.models.assessment import Assessment
 
-__all__ = ["Target"]
+all = ["Target", "Service", "Assessment"]
